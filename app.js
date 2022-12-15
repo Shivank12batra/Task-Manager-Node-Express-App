@@ -8,14 +8,8 @@ dotenv.config();
 
 const port = 3000;
 
-// app.use(express.urlencoded({extended:false}))
+app.use(express.static('./public'));
 app.use(express.json());
-
-// routes
-app.get('/hello', (req, res) => {
-    res.send('Task Manager App')
-}) 
-
 
 app.use('/api/v1/tasks', tasks);
 
